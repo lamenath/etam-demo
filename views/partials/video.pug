@@ -1,0 +1,5 @@
+- var video = slice.value.toArray()[0]
+div.video
+  != video.get('video').asHtml()
+  p.video-caption
+    != video.getStructuredText('caption').asText()

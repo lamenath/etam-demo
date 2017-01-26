@@ -1,0 +1,8 @@
+- var imageTextCut = slice.value.toArray()[0]
+
+a(href=imageTextCut.getLink('link').url(ctx.linkResolver))
+  div.image-text-cut
+    div.image-text-cut-image(style="background-image: url(" + imageTextCut.getImage('image').url + ");")
+    div.image-text-cut-text
+      != imageTextCut.getStructuredText('caption').asHtml()
+      != imageTextCut.getStructuredText('description').asHtml()

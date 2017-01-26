@@ -1,0 +1,26 @@
+extends ./layout-etam.pug
+
+block body
+  
+  div.page-content
+    
+    div.page-number
+      p 
+        != pageContent.getNumber('page.numero-de-rubrique')
+      p.edit-button(data-wio-id=pageContent.id)
+    
+    include ./partials/page-images.pug
+    
+    - var pageProducts = pageContent.getGroup('page.produit-mis-en-avant')
+    if pageProducts
+      div.page-products
+        each product in pageProducts.toArray()
+          - var link = product.getLink("lien-vers-le-produit") ? product.getLink("lien-vers-le-produit").url() : "#"
+          a(href=link)
+            div.product-image(style="background-image: url(" + product.getImage('image').url + ")")
+        
+    
+    div.page-text
+      != pageContent.getStructuredText('page.titre').asHtml(ctx.linkResolver)
+      != pageContent.getStructuredText('page.texte').asHtml(ctx.linkResolver)
+      a.return-link(href='/magazine') &larr; Back to home

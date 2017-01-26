@@ -1,0 +1,36 @@
+extends ./layout-etam.pug
+
+block body
+
+  div.home-header
+    != homeContent.getStructuredText('une.nom-du-magazine').asHtml()
+    != homeContent.getStructuredText('une.thematique-de-la-semaine').asHtml()
+    div.dash
+    p.date
+      != homeContent.getStructuredText('une.date').asText()
+    span(data-wio-id=homeContent.id)
+  
+  div.home-content
+    div.column1
+        for slice in homeContent.getSliceZone('une.col1').slices
+            case slice.sliceType
+                when 'video'
+                  include ./partials/video.pug
+                when 'bloc1'
+                  include ./partials/image-text-cut.pug
+                when 'bloc2'
+                  include ./partials/image-text-inside.pug
+                when 'bloc3'
+                  include ./partials/highlight.pug
+      
+    div.column2
+      for slice in homeContent.getSliceZone('une.col2').slices
+            case slice.sliceType
+                when 'video'
+                  include ./partials/video.pug
+                when 'bloc1'
+                  include ./partials/image-text-cut.pug
+                when 'bloc2'
+                  include ./partials/image-text-inside.pug
+                when 'bloc3'
+                  include ./partials/highlight.pug

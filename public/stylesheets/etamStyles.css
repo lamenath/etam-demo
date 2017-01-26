@@ -1,0 +1,243 @@
+
+.footerreinsurance {
+  clear: both;
+}
+
+/*************** HOME STYLES ***************/
+#main {
+  padding-top: 20px;
+}
+#main .home-header {
+  text-align: center;
+  padding-bottom: 30px;
+}
+#main h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+#main h2 {
+  font-size: 28px;
+  font-style: italic;
+}
+.dash {
+  width: 30px;
+  margin: 20px auto;
+  border-bottom: 3px solid #000000;
+}
+.date {
+  color: #ff6e7b;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.home-content {
+  overflow: auto;
+  margin-bottom: 60px;
+}
+.home-content .column1 {
+  float: left;
+  width: 67%;
+}
+.home-content .column2 {
+  float: right;
+  width: 30%;
+}
+.home-content .video iframe {
+  width: 100%;
+  max-width: 827px;
+  height: 465px;
+}
+.home-content .video .video-caption {
+  margin: 20px auto 40px;
+  max-width: 200px;
+  text-align: center;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.highlight {
+  margin-top: 30px;
+}
+.highlight img {
+  max-width: 200px;
+  margin-right: 20px;
+  float: left;
+}
+.highlight-text {
+  padding: 20px 0;
+}
+.highlight-text h3 {
+  font-size: 28px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.highlight-text p {
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.highlight-text .link a {
+  color: #ff6e7b;
+}
+.highlight-text h3 em {
+  font-size: 24px;
+  text-transform: none;
+}
+.highlight-right img {
+  margin-right: 0;
+  margin-left: 20px;
+  float: right;
+}
+.highlight-right .highlight-text {
+  text-align: right;
+}
+.highlight-right .highlight-text p {
+  max-width: 100%;
+}
+
+.image-text-cut {
+  margin-bottom: 30px;
+}
+.image-text-cut-image {
+  width: 100%;
+  height: 250px;
+  background-position: 50% 38%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-text-cut-text {
+  position: relative;
+  width: 90%;
+  margin: -30px auto 0;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+}
+.image-text-cut-text h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.image-text-cut-text p {
+  font-size: 14px;
+  color: #696969;
+}
+
+.image-text-inside {
+  margin-bottom: 30px;
+}
+.image-text-inside-image {
+  width: 100%;
+  height: 500px;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-text-inside-text {
+  position: relative;
+  margin: -472px auto 0;
+  text-align: center;
+  color: #ff6e7b;
+}
+.image-text-inside-text h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+
+
+/*************** PAGE STYLES ***************/
+
+.page-content {
+  overflow: auto;
+  margin-bottom: 60px;
+}
+.page-content .edit-button {
+  font-size: 16px;
+}
+.page-number {
+  float: left;
+  width: 100px;
+  text-align: center;
+  padding-top: 30px;
+}
+.page-number p {
+  font-size: 60px;
+  font-style: italic;
+}
+.page-images {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 500px;
+  margin-right: 20px;
+  overflow: auto;
+}
+.page-images .three-images-1,
+.page-images .three-images-2,
+.page-images .three-images-3 {
+  position: absolute;
+  width: 160px;
+}
+.page-images .three-images-1 {
+  left: 65px;
+  z-index: 20;
+}
+.page-images .three-images-2 {
+  top: 150px;
+  z-index: 30;
+}
+.page-images .three-images-3 {
+  top: 220px;
+  right: 0;
+  z-index: 10;
+}
+.page-products {
+  float: right;
+  width: 200px;
+  margin-left: 20px;
+}
+.page-products .product-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page-text {
+  padding-top: 50px;
+}
+#main .page-text h1 {
+  font-size: 38px;
+  line-height: 38px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#main .page-text p, 
+#main .page-text a {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: #919191;
+}
+#main .page-text h1 em {
+  font-weight: normal;
+  text-transform: none;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+

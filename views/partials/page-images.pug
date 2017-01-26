@@ -1,0 +1,16 @@
+- var image1 = pageContent.getImage('page.image1')
+- var image2 = pageContent.getImage('page.image2')
+- var image3 = pageContent.getImage('page.image3')
+
+if image1 || image2 || image3
+  div.page-images
+    if image1 && image2 && image3
+      img.three-images-1(src=image1.url)
+      img.three-images-2(src=image2.url)
+      img.three-images-3(src=image3.url)
+    else if image1
+      img(src=image1.url)
+    else if image2
+      img(src=image2.url)
+    else if image3
+      img(src=image3.url)

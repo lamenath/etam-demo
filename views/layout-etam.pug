@@ -1,0 +1,29 @@
+doctype html
+html.js.translated-ltr.desktop.landscape(lang='fr')
+  head
+    meta(name='robots', content='noindex, nofollow')
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale = 1.0, minimum-scale = 1.0,user-scalable = no')
+    title
+      | Lingerie shop: discover our collections of lingerie, clothes, swimwear, accessories and make bargains with Etam.  - Etam
+    link(href='http://demandware.edgesuite.net/aaww_prd/on/demandware.static/Sites-ETAM_FR-Site/-/default/dwb95cc8e5/images/favicon.ico', rel='shortcut icon')
+    meta(name='description', content='Etam : boutique de lingerie. Découvrez nos collections de lingerie, vêtements, prêt-à-porter, maillots de bain, acc ETAM')
+    meta(name='keywords', content='ETAM')
+    link(rel='stylesheet', href='http://demandware.edgesuite.net/aaww_prd/on/demandware.static/Sites-ETAM_FR-Site/-/fr/v1485354181302/css/style.css')
+    link(href='http://demandware.edgesuite.net/aaww_prd/on/demandware.static/-/Library-Sites-ETAM_sharedLibrary/fr/v1485354181302/MEDIA/css/quickfix2.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/headStyles.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/etamStyles.css', rel='stylesheet', type='text/css')
+    
+    // Required for Previews and Experiments
+    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+    script
+      = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+    script(src="//static.cdn.prismic.io/prismic.min.js")
+  body
+    
+    include ./partials/header.pug
+    
+    #main(role='main')
+      block body
+      
+    include ./partials/footer.pug

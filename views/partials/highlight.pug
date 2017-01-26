@@ -1,0 +1,12 @@
+- var highlight = slice.value.toArray()[0]
+- var highlightClass = "";
+if slice.label == "right"
+  - highlightClass = "highlight-right"
+
+div.highlight(class=highlightClass)
+  img(src=highlight.getImage('image').url)
+  div.highlight-text
+    != highlight.getStructuredText('caption').asHtml()
+    != highlight.getStructuredText('description').asHtml()
+    p.link
+      a(href=highlight.getLink('link').url(ctx.linkResolver)) Voir plus

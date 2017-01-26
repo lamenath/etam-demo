@@ -1,0 +1,7 @@
+- var imageTextInside = slice.value.toArray()[0]
+
+a(href=imageTextInside.getLink('link').url(ctx.linkResolver))
+  div.image-text-inside
+    div.image-text-inside-image(style="background-image: url(" + imageTextInside.getImage('image').url + ");")
+    div.image-text-inside-text
+      != imageTextInside.getStructuredText('caption').asHtml()

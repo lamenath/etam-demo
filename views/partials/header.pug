@@ -1,0 +1,101 @@
+#wrapper.pt_storefront
+  #header(role='banner')
+    .theader
+      .theader-wrapper
+        .theader-offers
+          .theader-offers-reinsurance
+            p
+              font
+                font Livraison Offerte Dès 60€ D'achat
+        .theader-nav
+          ul.menu-utility-user
+            li.accessAccountEtam
+              a.user-login(title='Account')
+                span
+                  font
+                    font Compte
+            li.fidelity
+              a(href='#')
+                font
+                  font Mon Espace Fidélité
+            li.wishlist
+              a(href='#')
+                span
+                  font
+                    font Favoris
+                span.number
+                  font
+                    font 0
+          #mini-cart.minicart
+            .mini-cart-total
+              .mini-cart-emptywrap
+                span.mini-cart-label.activeEtam
+                  font
+                    font Mon Panier 
+                span.mini-cart-empty
+                  font
+                    font 0
+    .mheader
+      .mheader-wrapper
+        .mobileSection
+          .selectLang.fl
+            a.languageSelected.filled
+              font
+                font Français
+          ul.stores
+            li.etamStore
+              a.icon-store(href='#')
+                font
+                  font Boutiques
+        h1.primary-logo
+          a.icon-etam(href='#')
+            img(src='http://demandware.edgesuite.net/aaww_prd/on/demandware.static/Sites-ETAM_FR-Site/-/default/dw63b2ca44/images/logo.png', alt='ETAM')
+            span(itemprop='name')
+              font
+                font ETAM
+        .header-search
+          form(role='search', action='http://www.etam.com/recherche', method='get', name='simpleSearch', novalidate='novalidate')
+            fieldset.icon-search
+              font
+                font
+                  input.icon-search.validDefault(type='submit', value='Go', disabled='disabled', autocomplete='off')
+              input#q(type='text', name='q', value='', placeholder='Chercher', aria-invalid='false', autocomplete='off')
+              span.close-search
+    #navigation.navigation(role='navigation')
+      nav
+        ul.menu-category.level-1.clearfix
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Soldes
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Nouveautés
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Soutiens-Gorge
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Culottes & Bas
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Nuit
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Prêt-À-Porter
+          li.mainItem
+            span.icon.ico
+            a.level-1(href='#')
+              font
+                font Accessoires
