@@ -89,6 +89,14 @@ app.route('/magazine/:uid').get(function(req, res) {
 
 
 /**
+* Index route redirects to the magazine homepage
+*/
+app.get('/', function(req, res) {
+  res.redirect('/magazine');
+});
+
+
+/**
 * Any other route redirects to the magazine homepage
 */
 app.get('*', function(req, res) {
