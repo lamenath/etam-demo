@@ -8,6 +8,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
+    "basic-auth": "^1.1.0",
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "errorhandler": "~1.1.1",
