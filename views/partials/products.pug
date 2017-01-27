@@ -1,0 +1,7 @@
+- var pageProducts = pageContent.getGroup('page.produit-mis-en-avant')
+if pageProducts
+  div.page-products
+    each product in pageProducts.toArray()
+      - var link = product.getLink("lien-vers-le-produit") ? product.getLink("lien-vers-le-produit").url() : "#"
+      a(href=link)
+        div.product-image(style="background-image: url(" + product.getImage('image').url + ")")

@@ -6,16 +6,24 @@ var app = require('./config');
 var PORT = app.get('port');
 var PConfig = require('./prismic-configuration');
 var request = require('request');
-
-// Render the 404 page
-function render404(req, res) {
-  res.status(404);
-  res.render('404');
-}
+var auth = require('basic-auth');
 
 // Start the server
 app.listen(PORT, function() {
   console.log('Point your browser to http://localhost:' + PORT);
+});
+
+// Require password 
+app.use(function (req, res, next) {
+  var credentials = auth(req);
+
+  if (!credentials || credentials.name !== 'maquette' || credentials.pass !== 'TbkMwYUYZe') {
+    res.statusCode = 401;
+    res.setHeader('WWW-Authenticate', 'Basic realm="example"');
+    res.end('Access denied');
+  } else {
+    next();
+  }
 });
 
 // Middleware to connect to the API
@@ -70,7 +78,10 @@ app.route('/magazine/:uid').get(function(req, res) {
   
   // Query the page content by the uid
   req.prismic.api.getByUID('page', uid).then(function(pageContent) {
-
+    
+    // Redirect to magazine homepage if no document is found
+    if (!pageContent) res.redirect('/magazine');
+    
     // Render the magazine page
     res.render('page', {pageContent: pageContent});
   });
@@ -78,8 +89,8 @@ app.route('/magazine/:uid').get(function(req, res) {
 
 
 /**
-* Index redirects to the magazine homepage
+* Any other route redirects to the magazine homepage
 */
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
   res.redirect('/magazine');
 });
